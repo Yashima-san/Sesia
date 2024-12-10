@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MyFile.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="450"
+        x:Class="MyFile.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Login"
+        Width="400"
+        Height="600">
+
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+	<Grid>
+		<TextBlock Text="ВХОД В СИСТЕМУ"
+						   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"
+						   Margin="0, 0, 0, 200"/>
+		<Panel Margin="25">
+			<TextBlock Text="Логин"
+				   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				   Margin="0, 0, 200, 10"/>
+			<TextBox Name="LoginTextBox"
+				 HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				 Margin="200, 0, 0, 10" Width="160"/>
+			<TextBlock Text="Пароль"
+				   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				Margin="0, 100, 200, 0"/>
+			<TextBox Name="PasswordTextBox"
+				 HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				Margin="200, 100, 0, 0" Width="160"/>
+			<Button x:Name="Button1"
+				HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+					Margin="0, 400, 0, 0" Click="EnterClick">Войти!</Button>
+		</Panel>
+		<Panel>
+			<TextBlock Name="StatusMessage"
+			   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"
+			   Margin="0, 500, 0, 0"/>
+		</Panel>
+	</Grid>
+</Window>

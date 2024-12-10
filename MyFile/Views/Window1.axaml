@@ -1,0 +1,25 @@
+<Window x:Class="MyFile.Views.Window1"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1"
+        Width="400"
+        Height="900">
+
+	<Grid>
+		<TextBlock Text="СОЗДАНИЕ ВОДИТЕЛЯ"
+						   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"
+						   Margin="0, 0, 0, 500"/>
+		<Panel Margin="25">
+			<TextBox Name="TextBox1"
+				 HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				 Margin="0, 0, 0, 400" Width="210"/>
+			<TextBox Name="TextBox2"
+				 HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+				 Margin="0, 0, 0, 10" Width="210"/>
+
+			<Button x:Name="Button2"
+				HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
+					Margin="0, 400, 0, 0">Добавить</Button>
+		</Panel>
+	</Grid>
+</Window>
